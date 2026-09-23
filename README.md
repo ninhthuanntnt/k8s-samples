@@ -21,3 +21,29 @@ Delete a namespace with file `namespace.yml`
 ```shell
 kubectl delete -f <namespace-yml-file>
 ```
+
+## Deployment
+Check existing deployments
+```shell
+kubectl get deployments -n <namespace>
+```
+
+Apply a deployment with file `deployment.yml`
+```shell
+kubectl apply -f <deployment-yml-file>
+```
+
+Check existing pods
+```shell
+kubectl get pods -n <namespace>
+```
+
+Delete a pod and see the self-healing works
+```shell
+kubectl delete pod <pod-name> -n <namespace>
+```
+
+Describe a pod to view the pod details
+```shell
+kubectl describe pod <pod-name> -n <namespace>
+```
