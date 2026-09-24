@@ -71,3 +71,17 @@ Command to view the logs of pod
 kubectl logs <pod-name> -n <namespace>
 ```
 
+## Port forwarding for quote service
+After applying the quote service deployment, check the pods. We can forward the pod to local machine to access the service.
+
+Port forward the deployment pod to local machine
+```shell
+kubectl port-forward <pod-name> <local-port>:<pod-expose-port> -n <namespace>
+```
+Then on local we can access the pod using `http://localhost:<local-port>`
+
+We can also use deployment name to port forward, it will forward the first pod of the deployment
+```shell
+kubectl port-forward deployment/<deployment-name> <local-port>:<pod-expose-port>
+```
+
