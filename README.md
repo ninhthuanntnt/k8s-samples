@@ -85,3 +85,13 @@ We can also use deployment name to port forward, it will forward the first pod o
 kubectl port-forward deployment/<deployment-name> <local-port>:<pod-expose-port>
 ```
 
+## Service
+Start the minikube tunnel
+```shell
+minikube tunnel
+```
+
+Apply the service
+```shell
+kubectl apply -f <service-yml-file>
+```
