@@ -95,3 +95,8 @@ Apply the service
 ```shell
 kubectl apply -f <service-yml-file>
 ```
+
+## Check the security
+```shell
+snyk iac test <deployment-yml-file>
+```
